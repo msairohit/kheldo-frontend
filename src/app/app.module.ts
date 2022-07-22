@@ -7,9 +7,10 @@ import { TestComponent } from './test/test.component';
 import { HomeComponent } from './kheldo/home/home.component';
 import { HeaderComponent } from './kheldo/header/header.component';
 import { ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent, HomeComponent, HeaderComponent],
+  declarations: [AppComponent, TestComponent, HomeComponent, HeaderComponent, CardComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

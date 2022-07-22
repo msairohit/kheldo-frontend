@@ -1,0 +1,27 @@
+<div class="card-group">
+    <div *ngFor="let item of dataFromParent">
+        <a routerLink="/{{item.routePath}}">
+            <div class="card" style="width: 18rem; margin: 20px;padding-left: 20px;padding-right: 20px;">
+                <img class="card-img-top" src="..." alt="{{item.gameName}} image">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">{{item.gameName}}</h5>
+                    <p class="card-text" style="height: 50px;text-align: center;overflow-x: auto;">
+                        {{item.gameDescription}}
+                    </p>
+                    <p class="card-text" style="height: 20px;"> No of players : {{item.noOfPlayers}}</p>
+                    <p class="card-text" style="height: 20px;"> No of times played : {{item.noOfTimesPlayed}}</p>
+                    <p class="card-text" style="height: 20px;"> Rating : {{item.rating}}</p>
+
+                    <a href="#">How to play</a>
+                    <button class="btn btn-success" *ngIf="!item.addedToCart" style="margin-left: 20px;"
+                        (click)="hostTheGame(item.gameName, item.gameId);$event.preventDefault();$event.stopPropagation();">Host
+                        the Game</button>
+
+                    <button class="btn btn-success" *ngIf="!item.addedToCart" style="margin-left: 20px;"
+                        (click)="joinTheGame(item.gameName, item.gameId);$event.preventDefault();$event.stopPropagation();">Join
+                        the Game</button>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
