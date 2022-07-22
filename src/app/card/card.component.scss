@@ -1,24 +1,148 @@
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
-.card:hover{
-    transform: scale(1.05);
- box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
-.card{
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  padding: 14px 80px 18px 36px;
-  cursor: pointer;
+.card {
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+  max-width: 35rem;
+  min-width: 30rem;
+  display: inline-block;
+  padding: 0;
+  background-image: url("../../assets/games-images/background-image.jpg");
+  background-position-x: -1;
+  background-size: cover;
+  transition: all 0.5s;
 }
-  
-@media(max-width: 990px){
-    .card{
-      margin: 20px;
-    }
-  } 
+
+.card-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: space-between;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  column-gap: 4.8rem;
+  row-gap: 4.8rem;
+  padding: 9.6rem;
+  background-color: #e7f5ff;
+}
+
+.image-box img {
+  width: 100%;
+  height: 25rem;
+  display: cover;
+}
+
+.card-body {
+  padding: 0.8rem 4.8rem 2.4rem 4.8rem;
+  font-family: rubik, sans-serif;
+  color: #222;
+  font-family: "Edu SA Beginner", sans-serif;
+}
+
+.card-title {
+  text-align: left;
+  font-size: 2.4rem;
+  padding: 0.4rem 0;
+  font-weight: 700;
+  text-shadow: 0.4px 0 0 #ffffff, 0 -0.4px 0 #fff, 0 0.4px 0 #fff,
+    -0.4px 0 0 #fff;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  padding: 0.8rem 0;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.button-box button {
+  border: none;
+  background-color: none;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.8rem 3.2rem;
+  border-radius: 4px;
+  margin-top: 1.2rem;
+}
+
+.how-to-play {
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+.how-to-play .link:link,
+.how-to-play .link:visited {
+  font-size: 1.6rem;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+  text-align: center;
+  transition: all 0.3s;
+  color: #0c8599;
+}
+
+.how-to-play .link:hover,
+.how-to-play .link:active {
+  color: #222;
+  font-weight: 500;
+}
+
+.card-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.card-li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+  text-align: center;
+}
+.btn {
+  transition: all 0.3s;
+}
+
+.btn-host {
+  background-color: #f08c00;
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn-host:hover {
+  background-color: #e67700;
+}
+
+.btn-join {
+  background-color: #2f9e44;
+  color: #fff;
+}
+
+.btn-join:hover {
+  background-color: #2b8a3e;
+}

@@ -1,27 +1,62 @@
 <div class="card-group">
-    <div *ngFor="let item of dataFromParent">
-        <a routerLink="/{{item.routePath}}">
-            <div class="card" style="width: 18rem; margin: 20px;padding-left: 20px;padding-right: 20px;">
-                <img class="card-img-top" src="..." alt="{{item.gameName}} image">
-                <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">{{item.gameName}}</h5>
-                    <p class="card-text" style="height: 50px;text-align: center;overflow-x: auto;">
-                        {{item.gameDescription}}
-                    </p>
-                    <p class="card-text" style="height: 20px;"> No of players : {{item.noOfPlayers}}</p>
-                    <p class="card-text" style="height: 20px;"> No of times played : {{item.noOfTimesPlayed}}</p>
-                    <p class="card-text" style="height: 20px;"> Rating : {{item.rating}}</p>
-
-                    <a href="#">How to play</a>
-                    <button class="btn btn-success" *ngIf="!item.addedToCart" style="margin-left: 20px;"
-                        (click)="hostTheGame(item.gameName, item.gameId);$event.preventDefault();$event.stopPropagation();">Host
-                        the Game</button>
-
-                    <button class="btn btn-success" *ngIf="!item.addedToCart" style="margin-left: 20px;"
-                        (click)="joinTheGame(item.gameName, item.gameId);$event.preventDefault();$event.stopPropagation();">Join
-                        the Game</button>
-                </div>
-            </div>
-        </a>
+  <div *ngFor="let game of dataFromParent" class="card">
+    <div class="image-box">
+      <img
+        class="card-img-top"
+        src="../../assets/games-images/{{ game.imageSource }}"
+        alt="{{ game.gameName }} image"
+      />
     </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ game.gameName }}
+      </h5>
+      <p class="card-text">
+        {{ game.gameDescription }}
+      </p>
+
+      <ul>
+        <li class="card-li">
+          <ion-icon name="people-outline" class="card-icon"></ion-icon>
+          <p class="card-text">upto {{ game.noOfPlayers }} players</p>
+        </li>
+        <li class="card-li">
+          <ion-icon name="golf-outline" class="card-icon"></ion-icon>
+          <p class="card-text">{{ game.noOfTimesPlayed }} times played</p>
+        </li>
+        <li class="card-li">
+          <ion-icon name="star-outline" class="card-icon"></ion-icon>
+          <p class="card-text">{{ game.rating }}</p>
+        </li>
+      </ul>
+
+      <div class="button-box">
+        <button
+          class="btn btn-host"
+          (click)="
+            hostTheGame(game.gameName, game.gameId);
+            $event.preventDefault();
+            $event.stopPropagation()
+          "
+        >
+          Host
+        </button>
+
+        <button
+          class="btn btn-join"
+          (click)="
+            joinTheGame(game.gameName, game.gameId);
+            $event.preventDefault();
+            $event.stopPropagation()
+          "
+        >
+          Join
+        </button>
+      </div>
+
+      <div class="how-to-play">
+        <a href="#" class="link">How to play</a>
+      </div>
+    </div>
+  </div>
 </div>

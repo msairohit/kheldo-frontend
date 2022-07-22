@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  viewportScroller: any;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public scrollToElement(elementId: string): void { 
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
 }

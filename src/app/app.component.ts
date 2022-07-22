@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kheldo';
+  viewportScroller: any;
   constructor(private httpClient: HttpClient) {
 
   }
+
+ 
 }
