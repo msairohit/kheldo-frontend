@@ -1,0 +1,63 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-img {
+  background-size: cover;
+  width: 100%;
+}
+
+.hero {
+  background-image: url("../../../assets/hero-background.jpg");
+  background-size: cover;
+}
+
+.hero-text-box {
+  grid-column: 2 / -1;
+  margin: 3.2rem;
+  padding: 6.4rem;
+  background-color: rgba(60, 10, 189, 0.5);
+  text-align: center;
+  border-radius: 100vh;
+}
+
+.heading-primary {
+  color: #f1f3f5;
+  font-size: 4.4rem;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  margin-bottom: 3.2rem;
+  font-weight: 600;
+}
+
+.hero-text-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  display: inline-block;
+  background-color: rgb(229, 153, 247, 0.4);
+  border-radius: 15000000rem;
+  padding: 3.2rem;
+  color: #f1f3f5;
+  margin-bottom: 3.2rem;
+}
+
+.hero-button:link,
+.hero-button:visited {
+  text-decoration: none;
+  color: #f1f3f5;
+  font-size: 2.4rem;
+  padding: 1.2rem 2.4rem;
+  font-family: "Edu SA Beginner", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  background-color: rgba(60, 10, 189, 0.4);
+  border-radius: 1500rem;
+  transition: all 0.3s;
+}
+
+.hero-button:hover,
+.hero-button:active {
+  background-color: rgba(60, 10, 189, 0.5);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  box-shadow: 0 0 0 1px #f1f3f5;
+}

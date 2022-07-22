@@ -1,0 +1,24 @@
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #f1f3f5;
+  font-weight: 500;
+  font-size: 2.4rem;
+  transition: all 0.3s;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #212529;
+  text-shadow: 1px 0 0 #f1f3f5, 0 -1px 0 #f1f3f5, 0 1px 0 #f1f3f5,
+    -1px 0 0 #f1f3f5;
+}
