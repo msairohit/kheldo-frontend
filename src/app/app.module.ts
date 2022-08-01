@@ -15,7 +15,7 @@ import { JoinQuizComponent } from './join-quiz/join-quiz.component';
 import { HostQuizComponent } from './host-quiz/host-quiz.component';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent, HomeComponent, HeaderComponent, CardComponent, PageNotFoundComponent, GamesComponent, QuizComponent, JoinQuizComponent, HostQuizComponent],
+  declarations: [AppComponent, TestComponent, HomeComponent, HeaderComponent, CardComponent, PageNotFoundComponent, GamesComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
