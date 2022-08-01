@@ -6,8 +6,8 @@ export class Game{
     public noOfPlayers:Number,
     public noOfTimesPlayed:Number,
     public rating:Number,
-    public routerPath:string,
-    public imageSource:string
+    public routePath:string,
+    public imageId:string
   ){
   }
 }

@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/http.service';
-import { Game } from '../Objects';
+import { Title } from '@angular/platform-browser';
+import { HttpService } from '../http.service';
+import { Game } from '../kheldo/Objects';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-games',
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class GamesComponent implements OnInit {
+
   gameData: Game[] = [
     new Game(
       '1003',
@@ -21,13 +23,15 @@ export class HomeComponent implements OnInit {
     ),
   ];
 
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService, private title: Title) {
+    this.title.setTitle("All Games | Kheldo");
+  }
 
   ngOnInit(): void {
     this.httpService.get('http://localhost:8080/Games/getAllGames').subscribe(
       //TODO: Place all urls in single file with base url configured.
       (data: any) => {
-        data.response.forEach((element : Game) => {
+        data.response.forEach((element: Game) => {
           this.gameData.push(element);
         });
       },
@@ -37,4 +41,5 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+
 }

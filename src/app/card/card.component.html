@@ -3,7 +3,7 @@
     <div class="image-box">
       <img
         class="card-img-top"
-        src="../../assets/games-images/{{ game.imageSource }}"
+        src="../../assets/games-images/{{ game.imageId }}"
         alt="{{ game.gameName }} image"
       />
     </div>
@@ -34,7 +34,7 @@
         <button
           class="btn btn-host"
           (click)="
-            hostTheGame(game.gameName, game.gameId);
+            hostTheGame(game.gameName, game.gameId, game.routePath);
             $event.preventDefault();
             $event.stopPropagation()
           "
@@ -45,7 +45,7 @@
         <button
           class="btn btn-join"
           (click)="
-            joinTheGame(game.gameName, game.gameId);
+            joinTheGame(game.gameName, game.gameId, game.routePath);
             $event.preventDefault();
             $event.stopPropagation()
           "
@@ -55,7 +55,7 @@
       </div>
 
       <div class="how-to-play">
-        <a href="#" class="link">How to play</a>
+        <a href="javascript:void(0);" (click)="howToPlay(game.routePath)" class="link">How to play</a>
       </div>
     </div>
   </div>

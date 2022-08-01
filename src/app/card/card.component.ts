@@ -21,14 +21,18 @@ export class CardComponent implements OnInit {
     console.log(this.dataFromParent);
   }
 
-  hostTheGame(gameName: string, gameId:string) {
-    alert("Hosting the game : " + gameName);
-    // this.router.navigate(['test']);//TODO: Navigate to appropriate page.
+  hostTheGame(gameName: string, gameId: string, routePath: String) {
+    console.log("Hosting the game : " + gameName);
+    this.router.navigate(['games/' + routePath + '/host']);
   }
 
-  joinTheGame(gameName: string, gameId:string) {
-    alert("Joining the game : " + gameName);
-    // this.router.navigate(['test']);//TODO: Navigate to appropriate page.
+  joinTheGame(gameName: string, gameId: string, routePath: String) {
+    console.log("Joining the game : " + gameName);
+    this.router.navigate(['games/' + routePath + '/join']);
+  }
+
+  howToPlay(routePath: String) {
+    this.router.navigate(['games/' + routePath + '/how-to-play']);
   }
 
 }

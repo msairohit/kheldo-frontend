@@ -8,9 +8,14 @@ import { HomeComponent } from './kheldo/home/home.component';
 import { HeaderComponent } from './kheldo/header/header.component';
 import { ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CardComponent } from './card/card.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GamesComponent } from './games/games.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { JoinQuizComponent } from './join-quiz/join-quiz.component';
+import { HostQuizComponent } from './host-quiz/host-quiz.component';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent, HomeComponent, HeaderComponent, CardComponent],
+  declarations: [AppComponent, TestComponent, HomeComponent, HeaderComponent, CardComponent, PageNotFoundComponent, GamesComponent, QuizComponent, JoinQuizComponent, HostQuizComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
